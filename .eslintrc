@@ -1,0 +1,28 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module", // 设置为 "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)
+    "impliedStrict": true, // 启动全局默认严格模式
+    "jsx": true, // 启用jsx
+    "ecmaVersion": "latest" // 启用最新的es
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "semi": 2,
+    "no-var": "error",
+    "no-unused-vars": 2,
+    "@typescript-eslint/ban-types": 0, //允许使用Object最为类型定义
+    "@typescript-eslint/no-explicit-any": 0, // 允许使用any
+    "@typescript-eslint/no-non-null-assertion": 0 // 允许非空断言
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

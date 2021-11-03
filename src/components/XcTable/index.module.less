@@ -1,0 +1,36 @@
+.xc-table-warpper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .top-warpper {
+    height: calc(100% - 44px);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .table-box {
+      width: calc(100% - 20px);
+      :global {
+        .ant-table-wrapper {
+          .ant-table-container {
+            .ant-table-content {
+              .ant-table-thead {
+                > tr > th {
+                  padding: 4px 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-box {
+      width: 20px;
+      border-left: none;
+    }
+  }
+  .bottom-warpper {
+    height: 44px;
+  }
+}
